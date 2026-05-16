@@ -5,6 +5,8 @@ This project is a data extraction and processing pipeline built to track the flo
 
 The script cleans messy financial data, stores it persistently in a local MongoDB database, and performs data aggregation to generate business intelligence metrics.
 
+> **Note:** If you encounter any issues during setup or execution, please refer to the [Troubleshooting](#-troubleshooting) section at the bottom of this document.
+
 ## Business Outcomes (Gold Layer)
 The script queries the cleaned database to produce 5 distinct analytical outcomes:
 1. **Total Money Spent:** Overall disclosed acquisition spending.
