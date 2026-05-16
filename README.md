@@ -67,7 +67,7 @@ playwright install-deps
 
 ---
 
-## 🏃‍♂️ How to Run the Project
+## How to Run the Project
 
 Once your environment is set up and MongoDB is running, simply execute the main script:
 
