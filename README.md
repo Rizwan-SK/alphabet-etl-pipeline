@@ -85,6 +85,30 @@ The script will:
 4. Insert the clean documents into MongoDB.
 5. Output the 5 Gold Layer Business Outcomes directly to your terminal.
 
+### Expected Terminal Output
+When the script finishes running, you should see an output similar to this:
+
+```text
+Successfully stored 270 acquisitions in MongoDB.
+
+--- BUSINESS OUTCOMES (GOLD LAYER) ---
+1. Total Money Spent: $79,059,200,000
+
+2. Top 3 Most Expensive Buys:
+   1. Wiz ($32,000,000,000)
+   2. Motorola Mobility ($12,500,000,000)
+   3. Mandiant ($5,400,000,000)
+
+3. Top 5 Business Sectors by Acquisition Count:
+   - Online advertising: 6
+   - Artificial intelligence: 5
+   ...
+
+4. Average Disclosed Acquisition Cost: $1,197,866,666.67
+```
+
+> **Viewing the Data:** You can connect to `mongodb://localhost:27017/` using **MongoDB Compass** to view the clean, structured data inside the `tech_economy_db` database.
+
 ---
 
 ## Troubleshooting
