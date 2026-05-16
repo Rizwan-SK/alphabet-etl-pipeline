@@ -110,21 +110,34 @@ Successfully stored 270 acquisitions in MongoDB.
 > **Viewing the Data:** You can connect to `mongodb://localhost:27017/` using **MongoDB Compass** to view the clean, structured data inside the `tech_economy_db` database.
 
 ---
-## 🧹 Teardown & Cleanup
+
+## Teardown & Cleanup
 If you are evaluating this project and wish to revert your environment back to its original state, follow these steps:
 
 **1. Deactivate the Virtual Environment and delete the project folder:**
 ```bash
 deactivate
 cd ..
-rm -rf alphabet-etl-pipeline
+rm -rf alphabet-etl-pipeline # (Use 'rmdir /s /q alphabet-etl-pipeline' on Windows)
 ```
 
-**2. Stop the MongoDB Service (Linux):**
-```bash
-sudo systemctl stop mongod
-```
-*(Note: The system-level OS dependencies installed by Playwright are standard media/font libraries that do not harm or bloat your system, so they can be safely left installed).*
+**2. Stop the MongoDB Service:**
+Depending on your operating system, use the appropriate command to stop the background database service:
+
+* **Linux (Ubuntu/Mint):**
+  ```bash
+  sudo systemctl stop mongod
+  ```
+* **macOS (Homebrew):**
+  ```bash
+  brew services stop mongodb-community
+  ```
+* **Windows (Command Prompt as Admin):**
+  ```cmd
+  net stop MongoDB
+  ```
+
+*(Note: The system-level OS dependencies installed by Playwright in step 6 are standard media/font libraries that do not harm or bloat your system, so they can be safely left installed).*
 
 ## Troubleshooting
 
