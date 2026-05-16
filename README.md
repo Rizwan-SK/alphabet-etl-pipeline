@@ -1,7 +1,7 @@
 # Tech Economy Data Flow: Alphabet Acquisitions Scraper
 
 ## Project Overview
-This project is a data extraction and processing pipeline built to track the flow of money in the tech economy. It uses Python to scrape the comprehensive list of Alphabet's (Google's) mergers and acquisitions from Wikipedia. 
+This project is a data extraction and processing pipeline built to track the flow of money in the tech economy. It uses Python and the **Scrapling** library (leveraging stealth, anti-bot browser capabilities) to scrape the comprehensive list of Alphabet's (Google's) mergers and acquisitions from Wikipedia. 
 
 The script cleans messy financial data, stores it persistently in a local MongoDB database, and performs data aggregation to generate business intelligence metrics.
 
@@ -110,6 +110,21 @@ Successfully stored 270 acquisitions in MongoDB.
 > **Viewing the Data:** You can connect to `mongodb://localhost:27017/` using **MongoDB Compass** to view the clean, structured data inside the `tech_economy_db` database.
 
 ---
+## 🧹 Teardown & Cleanup
+If you are evaluating this project and wish to revert your environment back to its original state, follow these steps:
+
+**1. Deactivate the Virtual Environment and delete the project folder:**
+```bash
+deactivate
+cd ..
+rm -rf alphabet-etl-pipeline
+```
+
+**2. Stop the MongoDB Service (Linux):**
+```bash
+sudo systemctl stop mongod
+```
+*(Note: The system-level OS dependencies installed by Playwright are standard media/font libraries that do not harm or bloat your system, so they can be safely left installed).*
 
 ## Troubleshooting
 
@@ -122,3 +137,6 @@ Successfully stored 270 acquisitions in MongoDB.
 * **Browser crashes or Playwright OS Errors on execution**
   * **Cause:** Missing low-level Linux libraries required by the headless browser.
   * **Fix:** Run `playwright install-deps` in your terminal to automatically install the missing system packages.
+
+---
+
