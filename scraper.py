@@ -1,3 +1,13 @@
+"""Tech Economy Data Flow: Alphabet Acquisitions Scraper by Rizwan Syedalavi Kaleelu"""
+
+"""This project is a data extraction and processing pipeline built to track the flow of money in the tech economy. It uses Python and the Scrapling library 
+(leveraging stealth, anti-bot browser capabilities) to scrape the comprehensive list of Alphabet's (Google's) mergers and acquisitions from Wikipedia.
+The script cleans messy financial data, stores it persistently in a local MongoDB database, and performs data aggregation to generate business intelligence metrics.
+
+Github link :https://github.com/Rizwan-SK/alphabet-etl-pipeline
+
+Check the README.md file for detailed instructions on setting up the environment, running the scraper, and understanding the output metrics."""
+
 import re
 from scrapling.fetchers import Fetcher
 from pymongo import MongoClient
